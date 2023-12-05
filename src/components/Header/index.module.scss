@@ -1,0 +1,94 @@
+@import "../../scss/mixins/container.scss";
+@import "../../scss/vars/vars.scss";
+
+.header {
+  padding: 16px 0;
+  background-color: $header;
+  color: $dark;
+}
+
+.wrapper {
+  @include container;
+
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  ul {
+    display: flex;
+    gap: $gap-default;
+
+    li {
+      padding: 8px 16px 8px 32px;
+      cursor: pointer;
+      position: relative;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+      background-position: left;
+      font-weight: 600;
+
+      &:nth-child(1) {
+        background-image: url('/public/menu-gallery.svg');
+      }
+
+      &:nth-child(2) {
+        background-image: url('/public/menu-hiring.svg');
+      }
+
+      &:nth-child(3) {
+        background-image: url('/public/menu-services.svg');
+      }
+
+      &:nth-child(4) {
+        background-image: url('/public/menu-contacts.svg');
+      }
+
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        width: 0;
+        height: 2px;
+
+        background-color: $dark;
+        transition: .4s width, height ease;
+      }
+
+
+
+      &:hover {
+        // line
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 2px;
+
+          background-color: $dark;
+          transition: .4s width, height ease;
+        }
+      }
+    }
+  }
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.logo__name {
+  display: inline-block;
+  max-width: 128px;
+  margin-left: 8px;
+  font-weight: 700;
+}

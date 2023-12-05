@@ -1,0 +1,12 @@
+@import '../../scss/mixins/container.scss';
+@import '../../scss/vars/vars.scss';
+
+.footer {
+    background-color: $dark;
+    padding: $padding-lg;
+    color: $light;
+}
+
+.wrapper {
+    @include container;
+}

@@ -1,0 +1,31 @@
+@import '../../scss/vars/vars.scss';
+
+.hero__form {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-md;
+    background-color: $form;
+    border-radius: $radius-default;
+    gap: $gap-md;
+
+
+    input::placeholder, input::-moz-placeholder, input::-webkit-input-placeholder {
+        color: $dark;
+    }
+
+    & > input, textarea {
+        border: none;
+        padding: 16px 32px;
+        font-weight: 700;
+        font-size: $font-defalut;
+        font-family: inherit;
+        border-radius: $radius-sm;
+
+
+
+    }
+    & > textarea {
+        max-height: 560px;
+        resize: vertical;
+    }
+}

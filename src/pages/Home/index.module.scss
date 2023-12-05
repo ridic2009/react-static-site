@@ -1,0 +1,32 @@
+@import '../../scss/mixins/container.scss';
+@import '../../scss/vars/vars.scss';
+
+.wrapper {
+    @include container;
+
+    color: $light;
+    font-size: $font-lg;
+
+
+    & > h1, p {
+        text-shadow: -3px 3px 7px rgba(0,0,0,0.7)
+    }
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero {
+    background-image: url('/public/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
